@@ -1,0 +1,113 @@
+Entity:
+  actAs:
+    Timestampable: ~
+    Sluggable: ~
+    I18n:
+      fields: [title, body]
+
+Page:
+  inheritance:
+    extends: Entity
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+
+# TODO : implement "Sellable" behavior (is_in_stock, price, etc)
+Item:
+  inheritance:
+    extends: Entity
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+  columns:
+    title:          string
+    body:           string
+    author:         string
+    image_original: string
+    image_thumb:    string
+
+Poster:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+
+Book:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+    
+Gear:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+    
+GraphicDesign:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+    
+ArtPrint:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+    
+Record:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+    
+Logo:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+    
+Card:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+
+Event:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+  columns:
+    starts_on: date
+
+Concert:
+  inheritance:
+    extends: Event
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+
+Exhibition:
+  inheritance:
+    extends: Event
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+
+Other:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
