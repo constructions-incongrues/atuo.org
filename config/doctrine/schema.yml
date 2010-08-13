@@ -6,21 +6,23 @@ Entity:
       fields: [title, body]
   columns:
     author:     string
-    is_enabled: boolean
+    is_enabled:
+      type: boolean
+      default: false
 
 MainCategory:
   inheritance:
     extends: Entity
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 2
 
 Page:
   inheritance:
     extends: Entity
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 3
 
 # TODO : implement "Sellable" behavior (is_in_stock, price, etc)
 Item:
@@ -28,7 +30,7 @@ Item:
     extends: Entity
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 4
   columns:
     title:          string
     body:           string
@@ -40,70 +42,70 @@ Poster:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 5
 
 Book:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 6
     
 Gear:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 7
     
 GraphicDesign:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 8
     
 ArtPrint:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 9
     
 Record:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 10
     
 Logo:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 11
     
 Card:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 12
 
 Other:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 13
     
 Event:
   inheritance:
     extends: Item
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 20
   columns:
     starts_on: date
 
@@ -112,11 +114,11 @@ Concert:
     extends: Event
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 21
 
 Exhibition:
   inheritance:
     extends: Event
     type: column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: 22

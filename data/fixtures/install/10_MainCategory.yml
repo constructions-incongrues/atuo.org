@@ -1,0 +1,23 @@
+MainCategory:
+  MainCategory_Blog:
+    title: Blog
+    
+  MainCategory_Portfolio:
+    title: Portfolio
+    
+  MainCategory_Editions:
+    title: Editions
+  
+  MainCategory_Events:
+    title: Events
+  
+  MainCategory_Shop:
+    title: Shop
+    
+  MainCategory_Links:
+    title: Links
+    
+  MainCategory_About:
+    title: About us  
+  
+  
