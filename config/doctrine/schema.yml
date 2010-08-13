@@ -5,7 +5,15 @@ Entity:
     I18n:
       fields: [title, body]
   columns:
-    author:         string
+    author:     string
+    is_enabled: boolean
+
+MainCategory:
+  inheritance:
+    extends: Entity
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
 
 Page:
   inheritance:
@@ -83,6 +91,13 @@ Card:
     keyField: type
     keyValue: 1
 
+Other:
+  inheritance:
+    extends: Item
+    type: column_aggregation
+    keyField: type
+    keyValue: 1
+    
 Event:
   inheritance:
     extends: Item
@@ -102,13 +117,6 @@ Concert:
 Exhibition:
   inheritance:
     extends: Event
-    type: column_aggregation
-    keyField: type
-    keyValue: 1
-
-Other:
-  inheritance:
-    extends: Item
     type: column_aggregation
     keyField: type
     keyValue: 1
