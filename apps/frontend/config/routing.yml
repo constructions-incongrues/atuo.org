@@ -1,16 +1,14 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
-# default rules
+entity_view:
+  url:   /
+  param: { module: entity, action: view }  
+
+entity_list:
+  url:   /
+  param: { module: entity, action: list }  
+
 homepage:
   url:   /
-  param: { module: default, action: index }
-
-# generic rules
-# please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*
+  param: { module: homepage, action: index }
