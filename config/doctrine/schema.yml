@@ -4,6 +4,8 @@ Entity:
     Sluggable: ~
     I18n:
       fields: [title, body]
+  columns:
+    author:         string
 
 Page:
   inheritance:
@@ -22,7 +24,6 @@ Item:
   columns:
     title:          string
     body:           string
-    author:         string
     image_original: string
     image_thumb:    string
 
