@@ -1,11 +1,14 @@
 <?php
 
 
-class GraphicDesignTable extends EntityTable
+class FlyerTable extends ItemTable
 {
+    /**
+     * @return FlyerTable
+     */
     public static function getInstance()
     {
-        return Doctrine_Core::getTable('GraphicDesign');
+        return Doctrine_Core::getTable('Flyer');
     }
 
     /**
@@ -14,6 +17,6 @@ class GraphicDesignTable extends EntityTable
      */
     public function getAdditionalSortingCriteriaName()
     {
-        return 'subcategory';
+        return 'year';
     }
 }

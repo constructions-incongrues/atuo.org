@@ -1,4 +1,6 @@
 .buildpath
 .project
 .settings/
+test/functional
+web/sf
 

@@ -1,0 +1,14 @@
+MainCategoryEntityTypeSettings:
+
+  Setting_Posters:
+    type: Poster
+    sort_attribute: year
+    
+  Setting_Flyers:
+    type: Flyer
+    sort_attribute: year
+    view_name: Thumbnails
+    
+  Setting_GraphicDesign:
+    type: GraphicDesign
+    sort_attribute: subcategory

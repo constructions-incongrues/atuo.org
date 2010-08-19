@@ -17,8 +17,13 @@ class homeActions extends sfActions
      */
     public function executeIndex(sfWebRequest $request)
     {
-        // TODO : Fetch main categories
+        // Fetch main categories
+        $mainCategories = MainCategoryTable::getInstance()->findAll();
+
         // TODO : Fetch main body contents (Page Entity instance)
         // TODO : Fetch latest blog posts (BlogPost instances)
+
+        // Pass data to view
+        $this->mainCategories = $mainCategories;
     }
 }

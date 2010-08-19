@@ -1,0 +1,72 @@
+Logo:
+  logo1:
+    title: logo1
+    author: trivoallan
+    MainCategories: [MainCategory_Portfolio, MainCategory_Editions]
+    
+  logo2:
+    title: logo2
+    author: trivoallan
+    MainCategories: [MainCategory_Portfolio]
+
+ArtPrint:
+  artprint1:
+    title: artprint1
+    author: trivoallan
+    MainCategories: [MainCategory_Editions]
+  artprint2:
+    title: artprint2
+    author: trivoallan
+    MainCategories: [MainCategory_Editions]
+  artprint3:
+    title: artprint3
+    author: trivoallan
+    MainCategories: [MainCategory_Portfolio]
+  artprint4:
+    title: artprint4
+    author: trivoallan
+    MainCategories: [MainCategory_Editions, MainCategory_Portfolio]
+
+Book:
+  book1:
+    title: book1
+    author: trivoallan
+    MainCategories: [MainCategory_Editions]
+  book2:
+    title: book2
+    author: trivoallan
+    MainCategories: [MainCategory_Editions]
+
+Flyer:
+  flyer1:
+    title: flyer1
+    author: trivoallan
+    MainCategories: [MainCategory_Editions, MainCategory_Portfolio]
+    year: 2010
+  flyer2:
+    title: flyer2
+    author: trivoallan
+    MainCategories: [MainCategory_Editions, MainCategory_Portfolio]
+    year: 2008
+  flyer3:
+    title: flyer3
+    author: trivoallan
+    MainCategories: [MainCategory_Portfolio]
+    year: 2008
+    
+GraphicDesign:
+  graphicdesign1:
+    title: graphicdesign1
+    author: trivoallan
+    MainCategories: [MainCategory_Portfolio]
+    subcategory: Illustration
+  graphicdesign2:
+    title: graphicdesign2
+    author: trivoallan
+    MainCategories: [MainCategory_Portfolio]
+    subcategory: Graphisme
+  graphicdesign3:
+    title: graphicdesign3
+    author: trivoallan
+    MainCategories: [MainCategory_Portfolio]
+    subcategory: Illustration

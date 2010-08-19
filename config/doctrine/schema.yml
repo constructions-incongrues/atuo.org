@@ -5,30 +5,68 @@ Entity:
     I18n:
       fields: [title, body]
   columns:
-    author:     string
-    is_enabled: boolean
+    id:
+      type:          integer(4)
+      autoincrement: true
+      primary:       true
+    author: string
+    title: string
+    type_slug: string
+    is_enabled:
+      type: boolean
+      default: false
 
 MainCategory:
-  inheritance:
-    extends: Entity
-    type: column_aggregation
-    keyField: type
-    keyValue: 1
+  actAs:
+    Timestampable: ~
+    Sluggable: ~
+    I18n:
+      fields: [title, body]
+  columns:
+    id:
+      type:          integer(4)
+      autoincrement: true
+      primary:       true
+    author: string
+    title: string
+    is_enabled:
+      type:    boolean
+      default: false
+  relations:
+    Entities:
+      foreignAlias: MainCategories
+      class:        Entity
+      refClass:     MainCategoryEntity
+
+MainCategoryEntity:
+  columns:
+    main_category_id:
+      type:          integer(4)
+      primary:       true
+    entity_id:
+      type:          integer(4)
+      primary:       true
+
+MainCategoryEntityTypeSettings:
+  columns:
+    type: string
+    sort_attribute: string
+    view_name: string
 
 Page:
   inheritance:
-    extends: Entity
-    type: column_aggregation
+    extends:  Entity
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Page
 
 # TODO : implement "Sellable" behavior (is_in_stock, price, etc)
 Item:
   inheritance:
-    extends: Entity
-    type: column_aggregation
+    extends:  Entity
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Item
   columns:
     title:          string
     body:           string
@@ -37,86 +75,101 @@ Item:
 
 Poster:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Poster
+  columns:
+    year: string
+
+Flyer:
+  inheritance:
+    extends:  Item
+    type:     column_aggregation
+    keyField: type
+    keyValue: Flyer
+  columns:
+    year: string
 
 Book:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Book
     
 Gear:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Gear
     
 GraphicDesign:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: GraphicDesign
+  columns:
+    subcategory: 
+      type: enum
+      values: [Illustration, Graphisme]
     
 ArtPrint:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: ArtPrint
     
 Record:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Record
     
 Logo:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Logo
     
 Card:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Card
 
 Other:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Other
     
 Event:
   inheritance:
-    extends: Item
-    type: column_aggregation
+    extends:  Item
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Event
   columns:
     starts_on: date
 
 Concert:
   inheritance:
-    extends: Event
-    type: column_aggregation
+    extends:  Event
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Concert
 
 Exhibition:
   inheritance:
-    extends: Event
-    type: column_aggregation
+    extends:  Event
+    type:     column_aggregation
     keyField: type
-    keyValue: 1
+    keyValue: Exhibition

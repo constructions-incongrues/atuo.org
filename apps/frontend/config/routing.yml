@@ -2,13 +2,31 @@
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
 entity_view:
-  url:   /
-  param: { module: entity, action: view }  
-
+  url:   /:slugCategory/:entityType/v/:slugEntity
+  param: { module: entity, action: view }
+  requirements:
+    sf_method: [get]
+    
+entity_list_criteria:
+  url:   /:slugCategory/:entityType/:criteria
+  param: { module: entity, action: list }
+  requirements:
+    sf_method: [get]
+    
 entity_list:
-  url:   /
-  param: { module: entity, action: list }  
-
+  url:   /:slugCategory/:entityType
+  param: { module: entity, action: list }
+  requirements:
+    sf_method: [get]
+    
+entity_list_root:
+  url:   /:slugCategory
+  param: { module: entity, action: list }
+  requirements:
+    sf_method: [get]
+      
 homepage:
   url:   /
-  param: { module: homepage, action: index }
+  param: { module: home, action: index }
+  requirements:
+    sf_method: [get]

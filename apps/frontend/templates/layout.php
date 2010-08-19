@@ -9,6 +9,8 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+  	<h1><?php echo link_to('atuo.org', '@homepage') ?></h1>
+
     <?php echo $sf_content ?>
   </body>
 </html>
