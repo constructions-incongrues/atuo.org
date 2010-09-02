@@ -1,0 +1,98 @@
+body 
+{
+background-color:#CCC;
+margin:0 auto;
+}
+
+/* PAGE */
+
+#container 
+{
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 960px; /* largeur obligatoire pour être centré */
+}
+
+/* HEADER*/
+
+#header 
+
+{
+height:150px;
+}
+
+#logo 
+{
+width:120px;
+height:150px;
+float:left;
+background-color:#000;
+}
+
+#logo2 
+{
+ width:200px;
+ height:150px;
+ background-color:#FFF;
+ float:left;
+ }
+ 
+ #logo3 
+{
+ width:640px;
+ height:150px;
+ background-color:yellow;
+ float:left;
+ }
+/* NAVBAR */
+
+#navbar1
+{
+width:120px;
+background-color:yellow;
+float:left;
+}
+
+#navbar2
+{
+width:200px;
+background-color:#000;
+float:left;
+}
+#navbar1 ul, #navbar2 ul
+{
+	list-style-type:none ;
+
+}
+
+#navbar1 li, #navbar2 li
+{
+	list-style-type:none ;
+
+}
+
+/* TEMPLATE*/
+
+#page
+{
+width:640px;
+background-color:red;
+float:left;
+color:#000;
+font-weight:normal;
+}
+
+#footer 
+{
+background-color:blue;
+}
+
+#mailing-list
+{
+float:right;
+margin-top:-10px;
+}
+/* TITRE */
+
+H1 {color:#990000; text-transform:uppercase;}
+H2 {color:#000; font-weight:bold;}
